@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from "@mui/material";
 import styles from './Modal.module.css';
 import { TiDeleteOutline } from 'react-icons/ti'
 

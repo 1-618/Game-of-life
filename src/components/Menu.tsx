@@ -2,7 +2,6 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import {ExampleModal} from './ExampleModal';
 import React from "react";
-import styles from "../App.module.css";
 
 const Menu = () => {
     const [isModalOpen, setModalState] = React.useState(false);
