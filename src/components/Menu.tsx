@@ -1,7 +1,17 @@
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import Grid from  '@mui/material/Grid';
 import {ExampleModal} from './ExampleModal';
 import React from "react";
+import { styled } from '@mui/material/styles';
+
+
+/*const Img = styled('img')({
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+});*/
 
 const Menu = () => {
     const [isModalOpen, setModalState] = React.useState(false);
@@ -25,14 +35,6 @@ const Menu = () => {
                     >
                         About
                     </Button>
-                    <ExampleModal
-                        title={'This is my modal'}
-                        isOpen={isModalOpen}
-                        onClose={toggleModal}
-                    >
-                        This is an example modal content!
-                        Watch whole video to see how to code it!
-                    </ExampleModal>
                 </div>
                 <div>
                     <Button style={{fontWeight: 'bolder'}}
@@ -45,8 +47,35 @@ const Menu = () => {
                         isOpen={isModalOpen}
                         onClose={toggleModal}
                     >
-                        This is an example modal content!
-                        Watch whole video to see how to code it!
+                        <Grid container spacing={8} columns={12}>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/block.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <img alt={'image'} src={"game-patterns/barge.png"} width={150}/>
+                            </Grid>
+                        </Grid>
                     </ExampleModal>
                 </div>
 
