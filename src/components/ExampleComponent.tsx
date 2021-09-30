@@ -1,8 +1,8 @@
 import React from 'react';
 import {Typography} from "@mui/material";
-import styles from './ExampleGrid.module.css'
+import styles from './Examples.module.css'
 
-const ExampleGrid = () => {
+const ExampleComponent = () => {
     return (
         <div className={styles.container} style={{paddingTop: '100px'}}>
             <div className={styles.item}>
@@ -34,4 +34,4 @@ const ExampleGrid = () => {
     );
 }
 
-export default ExampleGrid;
+export default ExampleComponent;

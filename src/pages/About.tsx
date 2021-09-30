@@ -1,13 +1,13 @@
 import React from 'react';
 import Menu from "../components/Menu";
-import AboutGrid from "../components/AboutGrid";
 import styles from "../App.module.css";
+import AboutComponent from "../components/AboutComponent";
 
 const About = () => {
     return (
         <div className={styles.App} style={{height: '100vh'}}>
         <Menu/>
-        <AboutGrid/>
+        <AboutComponent/>
         </div>
     );
 };

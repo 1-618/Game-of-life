@@ -1,14 +1,14 @@
 import React from 'react';
 import {Typography} from "@mui/material";
 
-const AboutGrid = () => {
+const AboutComponent = () => {
     return (
         <div style={{ maxWidth: '50%', padding: '60px 30px', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
 
-                <div style={{padding: '10px 10px', color: '#1d77d2', textAlign: 'justify'}}>
-                    <Typography align='center'>Conway's Game of Life</Typography>
+                <div style={{padding: '10px 10px', color: '#1d77d2', textAlign: 'justify', fontWeight: 'bold'}}>
+                    <Typography align='center' >Conway's Game of Life</Typography>
                 </div>
-                <div style={{paddingRight: '10px', paddingLeft: '10px', color: 'whitesmoke',textAlign: 'justify'}}>
+                <div style={{paddingRight: '10px', paddingLeft: '10px', color: 'whitesmoke',textAlign: 'justify', fontWeight: 'bold'}}>
                     <Typography>The Game of Life, also known simply as Life,
                         is a cellular automaton devised by the British mathematician John Horton Conway
                         in 1970. It is a zero-player game,
@@ -42,4 +42,4 @@ const AboutGrid = () => {
     );
 }
 
-export default AboutGrid;
+export default AboutComponent;
