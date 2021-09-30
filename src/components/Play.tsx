@@ -3,20 +3,20 @@ import produce from 'immer'
 import {Container, Button, ButtonGroup} from '@mui/material';
 import styles from "../App.module.css";
 
-const numRows = 15;
+const numRows = 25;
 const numCols = 50;
 
 //Locations of neighboring cells relative to the target cell
 const operations = [
-  [0, 1],
-  [0, 1],
-  [1, -1],
-  [-1, 1],
-  [1, 1],
-  [-1, -1],
-  [1, 0],
-  [-1, 0]
-]
+    [0, 1],
+    [0, -1],
+    [1, -1],
+    [-1, 1],
+    [1, 1],
+    [-1, -1],
+    [1, 0],
+    [-1, 0]
+];
 
 const generateEmptyGrid =  () => {
   const rows = [];
@@ -31,14 +31,14 @@ const generateEmptyGrid =  () => {
 const Play:React.FC = () => {
   //Initializing the grid using useState hook and setting it to a function
   const [grid, setGrid] = useState(() => {
-    return generateEmptyGrid()
+    return generateEmptyGrid();
   });
   //Set our initial running state to false
   const [running, setRunning] = useState(false);
 
   //Setting a useRef on the running state to ensure that we always use current data
   const runningRef = useRef(running);
-  runningRef.current = running
+  runningRef.current = running;
 
   //Simulation using a useCallback hook with an empty dependency array so it is only created once
   const runSimulation = useCallback(() => {
@@ -75,7 +75,7 @@ const Play:React.FC = () => {
     });
 
     //simulate
-    setTimeout(runSimulation, 1000)
+    setTimeout(runSimulation, 800)
   },[]);
 
 
@@ -92,7 +92,7 @@ const Play:React.FC = () => {
             setRunning(!running);
             if (!running) {
               runningRef.current = true;
-              runSimulation()
+              runSimulation();
             }
          }}
         >  {running ? 'stop' : 'start'}
@@ -104,7 +104,7 @@ const Play:React.FC = () => {
           //Loop through the rows
           for (let i = 0; i < numRows; i++) {
             //push a column into each row (A column is an array)//we do this by copying an array with 50 cols into every row//each array holds avalue of 0
-            rows.push(Array.from(Array(numCols), () => (Math.random() > 0.5 ? 1 : 0))
+            rows.push(Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0))
             );
           }
           setGrid(rows)
@@ -114,7 +114,7 @@ const Play:React.FC = () => {
         </Button>
         {/*Clearing the grid */}
         <Button style={{fontWeight: 'bold'}}
-            onClick={() => { generateEmptyGrid()
+            onClick={() => { setGrid(generateEmptyGrid());
         }}
         >
           clear
@@ -123,7 +123,7 @@ const Play:React.FC = () => {
       <div
           style={{
           display: 'grid',
-          gridTemplateColumns: `repeat(${numCols}, 21px)`
+          gridTemplateColumns: `repeat(${numCols}, 16.8px)`
       }}
       >
         {
@@ -142,10 +142,10 @@ const Play:React.FC = () => {
                        style={{
                          //conditionally set this according to the value of the column
                          backgroundColor: grid[x][y] ? '#94bbe9' : undefined,
-                         width: '20px',
-                         height: '20px',
-                         borderRadius: '6px',
-                         border: 'solid 1px white'
+                         width: '15px',
+                         height: '15px',
+                         borderRadius: '4px',
+                         border: 'solid 0.7px white'
                        }}
                     />
                ))

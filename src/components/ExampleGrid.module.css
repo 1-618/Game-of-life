@@ -1,0 +1,25 @@
+.example_div {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    align-content: start;
+    flex-basis: 40%;
+    height: 100vh;
+}
+.container:after {
+    display: block;
+    margin: 10px;
+    flex: 999 999 auto;
+}
+.item {
+    flex: 0 0 auto;
+    margin: 10px;
+}
