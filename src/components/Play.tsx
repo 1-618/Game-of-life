@@ -123,7 +123,7 @@ const Play:React.FC = () => {
       <div
           style={{
           display: 'grid',
-          gridTemplateColumns: `repeat(${numCols}, 16.8px)`
+          gridTemplateColumns: `repeat(${numCols}, 16.8px)`, height: 'auto',
       }}
       >
         {

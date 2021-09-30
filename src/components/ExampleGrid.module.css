@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: auto;
     align-content: start;
-    flex-basis: 40%;
+    flex-basis: 50%;
     height: 100vh;
 }
 .container:after {
